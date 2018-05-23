@@ -509,7 +509,7 @@ class solution():
 
         print('two day cnt')
         for d in range(18, 26):
-            df1 = data[(data['day'] >= d - 1) & (data['day'] < d)]
+            df1 = data[(data['day'] >= d - 2) & (data['day'] < d)]
             df2 = data[data['day'] == d]
             # item_trade_cnt = df1.groupby(['item_id','shop_id','is_trade']).count()['instance_id'].to_dict()
             user_cnt = df1.groupby(by='user_id').count()['instance_id'].to_dict()
